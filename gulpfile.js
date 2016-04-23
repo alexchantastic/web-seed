@@ -9,17 +9,13 @@ var sass = require('gulp-sass'),
     run = require('run-sequence');
 
 var paths = {
-  'sass': 'styles/scss/',
+  'sass': 'styles/src/',
   'css': 'styles/'
 };
 
 gulp.task('sass', function() {
   return gulp.src(paths.sass + '*.scss')
-  .pipe(sass({
-    onError: function(error) {
-      console.log(error);
-    }
-  }))
+  .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixer())
   .pipe(gulp.dest('styles/'))
   .pipe(browsersync.reload({stream: true}));
