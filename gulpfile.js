@@ -32,7 +32,8 @@ gulp.task('css', function() {
 gulp.task('js', function() {
   return gulp.src(paths.js.src + '*.js')
     .pipe(concat('core.js'))
-    .pipe(gulp.dest(paths.js.dist));
+    .pipe(gulp.dest(paths.js.dist))
+    .pipe(browsersync.reload({stream: true}));
 });
 
 gulp.task('minify:css', function() {
@@ -63,6 +64,8 @@ gulp.task('server:reload', function() {
 
 gulp.task('watch', ['server'], function() {
   gulp.watch(paths.css.src + '*.scss', ['css']);
+
+  gulp.watch(paths.js.src + '*.js', ['js']);
 
   gulp.watch('./*.html', ['server:reload']);
 });
