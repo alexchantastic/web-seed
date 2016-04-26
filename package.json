@@ -1,13 +1,16 @@
 {
   "name": "web-bootstrap",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Bootstrap for a simple website using Gulp.",
+  "homepage": "https://github.com/alexchantastic/web-bootstrap",
+  "bugs": {"url": "https://github.com/alexchantastic/web-bootstrap/issues"},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexchantastic/web-bootstrap.git"
   },
-  "author": "",
-  "license": "ISC",
+  "main": "js/core.js",
+  "author": "Alex Chan",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.12.3",
     "gulp": "^3.9.1",
