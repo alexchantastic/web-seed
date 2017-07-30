@@ -12,13 +12,12 @@
   "author": "Alex Chan",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.12.3",
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-csso": "^1.1.0",
-    "gulp-sass": "^2.3.1",
-    "gulp-uglify": "^1.5.3",
-    "run-sequence": "^1.1.5"
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.1.0"
   }
 }
