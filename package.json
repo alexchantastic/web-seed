@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Bootstrap for a simple website using Gulp.",
   "homepage": "https://github.com/alexchantastic/web-bootstrap",
-  "bugs": {"url": "https://github.com/alexchantastic/web-bootstrap/issues"},
+  "bugs": {
+    "url": "https://github.com/alexchantastic/web-bootstrap/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/alexchantastic/web-bootstrap.git"
@@ -13,11 +15,15 @@
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-csso": "^1.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
-    "run-sequence": "^2.1.0"
+    "run-sequence": "^2.1.0",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^3.4.1",
+    "webpack-stream": "^3.2.0"
   }
 }
