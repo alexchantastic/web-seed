@@ -4,8 +4,8 @@ Bootstrap your site development. Great for building small sites and simple proto
 
 ## Requirements
 
-* [node](https://nodejs.org) (v4.4.x)
-* [npm](https://www.npmjs.com/) (v2.14.x)
+* [node](https://nodejs.org) (v4.2.x)
+* [npm](https://www.npmjs.com/) (v4.1.x)
 
 ## Installation
 
