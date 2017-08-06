@@ -35,6 +35,9 @@ gulp.task('js', ['clean:js'], function() {
   return gulp.src(paths.js.src + '**/*.js')
     .pipe(named())
     .pipe(webpack())
+    .on('error', function handleError() {
+      this.emit('end');
+    })
     .pipe(gulp.dest(paths.js.dist))
     .pipe(browsersync.reload({stream: true}));
 });
