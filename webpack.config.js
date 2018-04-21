@@ -1,7 +1,6 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
-      HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin'),
       webpack = require('webpack');
 
 module.exports = {
@@ -15,20 +14,28 @@ module.exports = {
   },
   module: {
     rules: [
-
+      {
+        test: /\.s?css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 2 }
+          },
+          'postcss-loader',
+          'sass-loader'
+        ]
+      }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      alwaysWriteToDisk: true,
       template: 'index.html'
     }),
-    new HtmlWebpackHarddiskPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
-    hot: true,
-    watchContentBase: true
+    hot: true
   }
 };
