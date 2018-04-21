@@ -1,7 +1,8 @@
 const config = require('./webpack.config.js');
 
 const merge = require('webpack-merge'),
-      MiniCssExtractPlugin = require('mini-css-extract-plugin');
+      MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+      UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const prodConfig = {
   mode: 'production',
@@ -13,7 +14,10 @@ const prodConfig = {
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: { importLoaders: 2 }
+            options: {
+              importLoaders: 2,
+              minimize: true
+            }
           },
           'postcss-loader',
           'sass-loader'
@@ -24,7 +28,8 @@ const prodConfig = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css'
-    })
+    }),
+    new UglifyJsPlugin()
   ]
 };
 
