@@ -1,6 +1,7 @@
 const config = require('./webpack.config.js');
 
-const merge = require('webpack-merge');
+const merge = require('webpack-merge'),
+      MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const prodConfig = {
   mode: 'production',
@@ -9,7 +10,7 @@ const prodConfig = {
       {
         test: /\.s?css$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: { importLoaders: 2 }
@@ -19,7 +20,12 @@ const prodConfig = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'styles/[name].css'
+    })
+  ]
 };
 
 module.exports = merge(prodConfig, config);
