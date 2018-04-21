@@ -17,6 +17,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(svg|png|jpg|gif)$/,
+        include: /images/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { name: '[name].[ext]'}
+          }
+        ]
+      },
+      {
         test: /\.s?css$/,
         use: [
           {
@@ -39,6 +49,10 @@ module.exports = {
             options: { sourceMap: true }
           }
         ]
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader']
       }
     ]
   },
