@@ -22,7 +22,17 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: { name: '[name].[ext]'}
+            options: { name: '[name].[ext]' }
+          }
+        ]
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        include: /fonts/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { name: '[name].[ext]' }
           }
         ]
       },
