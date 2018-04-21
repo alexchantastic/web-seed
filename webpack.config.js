@@ -1,6 +1,7 @@
 const path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin'),
+const CleanWebpackPlugin = require('clean-webpack-plugin'),
+      HtmlWebpackPlugin = require('html-webpack-plugin'),
       webpack = require('webpack');
 
 let devServer;
@@ -55,6 +56,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(['./dist']),
     new HtmlWebpackPlugin({
       template: './src/public/index.html'
     })
