@@ -3,6 +3,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
       webpack = require('webpack');
 
+let devServer;
+
 module.exports = {
   mode: 'development',
   entry: {
@@ -32,10 +34,35 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'index.html'
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    reloadHtml
   ],
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
-    hot: true
+    hot: true,
+    before(app, server) {
+      devServer = server;
+    }
   }
 };
+
+function reloadHtml() {
+  this.plugin('compilation', thing =>
+    thing.plugin('html-webpack-plugin-after-emit', trigger)
+  );
+
+  const cache = {};
+
+  function trigger(data, callback) {
+    const orig = cache[data.outputName];
+    const html = data.html.source();
+
+    if (orig && orig !== html) {
+      devServer.sockWrite(devServer.sockets, 'content-changed');
+    }
+
+    cache[data.outputName] = html;
+
+    callback();
+  }
+}
