@@ -8,7 +8,7 @@ let devServer;
 module.exports = {
   mode: 'development',
   entry: {
-    app: './src/js/app.js'
+    app: './src/app.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -22,7 +22,10 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: { name: '[name].[ext]' }
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images'
+            }
           }
         ]
       },
@@ -32,7 +35,10 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: { name: '[name].[ext]' }
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts'
+            }
           }
         ]
       },
@@ -74,7 +80,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html'
+      template: './src/public/index.html'
     }),
     new webpack.HotModuleReplacementPlugin(),
     reloadHtml

@@ -2,7 +2,7 @@ if (module.hot) {
   module.hot.accept();
 }
 
-import '../../index.html';
+import 'public/index.html';
 
 import 'styles/app.scss';
 
