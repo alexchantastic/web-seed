@@ -46,6 +46,7 @@ const devConfig = {
   ],
   devtool: 'cheap-eval-source-map',
   devServer: {
+    port: 3000,
     contentBase: path.resolve(__dirname, 'dist'),
     hot: true,
     before(app, server) {
