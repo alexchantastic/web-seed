@@ -19,13 +19,25 @@ module.exports = {
       {
         test: /\.s?css$/,
         use: [
-          'style-loader',
+          {
+            loader: 'style-loader',
+            options: { sourceMap: true }
+          },
           {
             loader: 'css-loader',
-            options: { importLoaders: 2 }
+            options: {
+              importLoaders: 2,
+              sourceMap: true
+            }
           },
-          'postcss-loader',
-          'sass-loader'
+          {
+            loader: 'postcss-loader',
+            options: { sourceMap: true }
+          },
+          {
+            loader: 'sass-loader',
+            options: { sourceMap: true }
+          }
         ]
       }
     ]
@@ -37,6 +49,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     reloadHtml
   ],
+  devtool: 'cheap-eval-source-map',
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     hot: true,
