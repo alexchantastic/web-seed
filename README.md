@@ -1,6 +1,6 @@
 # web-bootstrap
 
-A starter repository based on [webpack](https://webpack.js.org/) for building small websites and simple prototypes.
+A starter repository built on [webpack](https://webpack.js.org/) for building small websites and simple prototypes.
 
 ## Requirements
 
@@ -17,10 +17,10 @@ A starter repository based on [webpack](https://webpack.js.org/) for building sm
 
 After the install has completed, run `yarn dev` to launch a local server at [http://localhost:3000](http://localhost:3000). Any changes you make to will compile the respective assets and refresh the page automatically.
 
-## Gulp Commands
+## Commands
 
-* `yarn dev` - Builds the project and launches a local server at [http://localhost:3000](http://localhost:3000)
 * `yarn build` - Builds the project
 * `yarn build:dev` - Builds the development version of the project
+* `yarn dev` - Builds the project and launches a local server at [http://localhost:3000](http://localhost:3000)
 * `yarn eslint` - Runs [eslint](https://eslint.org/)
 * `yarn stylelint` - Runs [stylelint](https://stylelint.io/)
