@@ -1,4 +1,4 @@
-# web-bootstrap
+# web-seed
 
 A starter repository built on [webpack](https://webpack.js.org/) for building small websites and simple prototypes.
 
