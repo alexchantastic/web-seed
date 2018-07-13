@@ -50,10 +50,9 @@ module.exports = {
     ]
   },
   resolve: {
-    modules: [
-      path.resolve(__dirname, 'src'),
-      'node_modules'
-    ]
+    alias: {
+      '@src': path.resolve(__dirname, 'src')
+    }
   },
   plugins: [
     new CleanWebpackPlugin(['./dist']),
