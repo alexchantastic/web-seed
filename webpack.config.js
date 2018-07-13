@@ -4,8 +4,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin'),
       HtmlWebpackPlugin = require('html-webpack-plugin'),
       webpack = require('webpack');
 
-let devServer;
-
 module.exports = {
   mode: 'development',
   entry: {
