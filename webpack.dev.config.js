@@ -3,8 +3,7 @@ const config = require('./webpack.config.js');
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
-      merge = require('webpack-merge'),
-      webpack = require('webpack');
+      merge = require('webpack-merge');
 
 const devConfig = {
   module: {

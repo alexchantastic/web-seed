@@ -1,7 +1,5 @@
 const config = require('./webpack.config.js');
 
-const path = require('path');
-
 const merge = require('webpack-merge'),
       MiniCssExtractPlugin = require('mini-css-extract-plugin'),
       UglifyJsPlugin = require('uglifyjs-webpack-plugin');
