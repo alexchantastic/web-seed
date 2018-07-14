@@ -1,6 +1,6 @@
 {
   "name": "web-seed",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A starter repository built on webpack for building small websites and simple prototypes.",
   "homepage": "https://github.com/alexchantastic/web-seed",
   "bugs": {
