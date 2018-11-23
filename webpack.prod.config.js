@@ -6,6 +6,9 @@ const merge = require('webpack-merge'),
 
 const prodConfig = {
   mode: 'production',
+  output: {
+    filename: '[name].bundle.[hash].js',
+  },
   module: {
     rules: [
       {
@@ -32,10 +35,10 @@ const prodConfig = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].css'
+      filename: 'styles/[name].[hash].css'
     }),
     new UglifyJsPlugin()
   ]
 };
 
-module.exports = merge(prodConfig, config);
+module.exports = merge(config, prodConfig);
