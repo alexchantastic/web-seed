@@ -2,8 +2,7 @@ const config = require('./webpack.config.js');
 
 const path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin'),
-      merge = require('webpack-merge');
+const merge = require('webpack-merge');
 
 const devConfig = {
   module: {
@@ -34,11 +33,6 @@ const devConfig = {
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/public/index.html'
-    })
-  ],
   devtool: 'cheap-eval-source-map',
   devServer: {
     port: 3000,
