@@ -47,7 +47,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.config.js",
     "build:dev": "webpack --config webpack.dev.config.js",
-    "dev": "webpack-dev-server --config webpack.dev.config.js",
+    "start": "webpack-dev-server --config webpack.dev.config.js",
     "eslint": "eslint src/**/*.js",
     "lint": "yarn eslint && yarn stylelint",
     "stylelint": "stylelint src/**/*.scss src/**/*.css"
