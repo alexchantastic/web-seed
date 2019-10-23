@@ -19,7 +19,7 @@ After the install has completed, run `yarn dev` to launch a local server at [htt
 
 ## Commands
 
+* `yarn start` - Builds the project and launches a local server at [http://localhost:3000](http://localhost:3000)
 * `yarn build` - Builds the project
 * `yarn build:dev` - Builds the development version of the project
-* `yarn dev` - Builds the project and launches a local server at [http://localhost:3000](http://localhost:3000)
 * `yarn lint` - Runs [eslint](https://eslint.org/) and [stylelint](https://stylelint.io/)
