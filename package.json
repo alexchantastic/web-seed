@@ -1,6 +1,6 @@
 {
   "name": "@alexchantastic/web-seed",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "A starter repository built on webpack for building small websites and simple prototypes.",
   "homepage": "https://github.com/alexchantastic/web-seed",
   "bugs": {
@@ -32,6 +32,7 @@
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.8.3",
     "postcss-loader": "^2.1.4",
+    "rimraf": "^3.0.2",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "stylelint": "^9.2.0",
@@ -47,9 +48,11 @@
   "scripts": {
     "build": "webpack --config webpack.prod.config.js",
     "build:dev": "webpack --config webpack.dev.config.js",
-    "start": "webpack-dev-server --config webpack.dev.config.js",
     "eslint": "eslint src/**/*.js",
     "lint": "yarn eslint && yarn stylelint",
+    "preinstall": "rimraf .git",
+    "postinstall": "git init",
+    "start": "webpack-dev-server --config webpack.dev.config.js",
     "stylelint": "stylelint src/**/*.scss src/**/*.css"
   }
 }
