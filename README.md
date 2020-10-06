@@ -15,7 +15,7 @@ A starter repository built on [webpack](https://webpack.js.org/) for building sm
 
 ## Quick Start
 
-After the install has completed, run `yarn dev` to launch a local server at [http://localhost:3000](http://localhost:3000). Any changes you make to will compile the respective assets and refresh the page automatically.
+After the install has completed, run `yarn start` to launch a local server at [http://localhost:3000](http://localhost:3000). Any changes you make to will compile the respective assets and refresh the page automatically.
 
 ## Commands
 
