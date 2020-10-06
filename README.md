@@ -4,8 +4,8 @@ A starter repository built on [webpack](https://webpack.js.org/) for building sm
 
 ## Requirements
 
-* [node](https://nodejs.org) (v8.11.x)
-* [yarn](https://yarnpkg.com) (v1.6.x)
+* [node](https://nodejs.org) (v12.18.x)
+* [yarn](https://yarnpkg.com) (v1.17.x)
 
 ## Installation
 
