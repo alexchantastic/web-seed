@@ -50,7 +50,7 @@
     "eslint": "eslint src/**/*.js",
     "lint": "yarn eslint && yarn stylelint",
     "preinstall": "rm -rf .git",
-    "postinstall": "git init",
+    "postinstall": "git init && git add . && git commit -m 'Initial commit'",
     "start": "webpack-dev-server --config webpack.dev.config.js",
     "stylelint": "stylelint src/**/*.scss src/**/*.css"
   }
