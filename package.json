@@ -45,12 +45,11 @@
     "webpack-merge": "^4.1.2"
   },
   "scripts": {
+    "bootstrap": "yarn install && rm -rf .git && git init && git add . && git commit -m 'Initial commit'",
     "build": "webpack --config webpack.prod.config.js",
     "build:dev": "webpack --config webpack.dev.config.js",
     "eslint": "eslint src/**/*.js",
     "lint": "yarn eslint && yarn stylelint",
-    "preinstall": "rm -rf .git",
-    "postinstall": "git init && git add . && git commit -m 'Initial commit'",
     "start": "webpack-dev-server --config webpack.dev.config.js",
     "stylelint": "stylelint src/**/*.scss src/**/*.css"
   }

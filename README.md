@@ -11,7 +11,7 @@ A starter repository built on [webpack](https://webpack.js.org/) for building sm
 
 1. Clone the repository
 2. `cd` into the created directory
-3. Run `yarn install`
+3. Run `yarn bootstrap`
 
 ## Quick Start
 
